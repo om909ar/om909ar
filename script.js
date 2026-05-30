@@ -1,22 +1,59 @@
+const lessons = [
+{
+title:"اليوم 1",
+rule:"am / is / are",
+words:["Employee","Manager","Office","Meeting","Report"]
+},
+{
+title:"اليوم 2",
+rule:"Pronouns",
+words:["Father","Mother","Brother","Sister","Family"]
+},
+{
+title:"اليوم 3",
+rule:"Present Simple",
+words:["Work","Read","Write","Drive","Study"]
+},
+{
+title:"اليوم 4",
+rule:"Present Simple Negative",
+words:["Car","House","Room","Door","Key"]
+},
+{
+title:"اليوم 5",
+rule:"Present Simple Questions",
+words:["Morning","Evening","Night","Today","Tomorrow"]
+}
+];
 
-function checkAnswer(correct){
+let currentDay = parseInt(localStorage.getItem("day")) || 1;
 
-    const result = document.getElementById("result");
+function renderLesson(){
 
-    if(correct){
-        result.innerHTML = "✅ إجابة صحيحة";
-        localStorage.setItem("progress","10");
-        document.getElementById("progress").innerText = "10%";
-    }else{
-        result.innerHTML = "❌ إجابة خاطئة";
-    }
+const lesson = lessons[currentDay - 1];
+
+document.getElementById("lessonTitle").innerText = lesson.title;
+document.getElementById("lessonRule").innerText = lesson.rule;
+
+let html = "";
+
+lesson.words.forEach(word=>{
+html += `<li>${word}</li>`;
+});
+
+document.getElementById("wordList").innerHTML = html;
+
+document.getElementById("dayCounter").innerText =
+`${currentDay} / 30`;
 }
 
-window.onload = function(){
+function nextDay(){
 
-    const saved = localStorage.getItem("progress");
-
-    if(saved){
-        document.getElementById("progress").innerText = saved + "%";
-    }
+if(currentDay < lessons.length){
+currentDay++;
+localStorage.setItem("day",currentDay);
+renderLesson();
 }
+}
+
+renderLesson();
