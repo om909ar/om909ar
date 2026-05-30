@@ -1,1 +1,66 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Journey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📚 English Journey</h1>
+
+    <div class="card">
+        <h2>التقدم</h2>
+        <p>نسبة الإنجاز: <span id="progress">0%</span></p>
+    </div>
+
+    <div class="card">
+        <h2>درس اليوم</h2>
+
+        <h3>am / is / are</h3>
+
+        <p><b>I</b> ➜ am</p>
+        <p><b>He / She</b> ➜ is</p>
+        <p><b>They / We / You</b> ➜ are</p>
+
+        <hr>
+
+        <p>I am Abdullah.</p>
+        <p>He is a manager.</p>
+        <p>They are students.</p>
+    </div>
+
+    <div class="card">
+        <h2>كلمات اليوم</h2>
+
+        <ul>
+            <li>Employee = موظف</li>
+            <li>Manager = مدير</li>
+            <li>Office = مكتب</li>
+            <li>Meeting = اجتماع</li>
+            <li>Report = تقرير</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>اختبار سريع</h2>
+
+        <p>أنا موظف</p>
+
+        <button onclick="checkAnswer(true)">I am an employee</button>
+        <button onclick="checkAnswer(false)">I is employee</button>
+        <button onclick="checkAnswer(false)">I are employee</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
