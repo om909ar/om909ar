@@ -11,52 +11,28 @@
 
 <div class="container">
 
-    <h1>📚 English Journey</h1>
+<h1>🚀 تحدي 30 يوم إنجليزي</h1>
 
-    <div class="card">
-        <h2>التقدم</h2>
-        <p>نسبة الإنجاز: <span id="progress">0%</span></p>
-    </div>
+<div class="card">
+<h2>التقدم</h2>
+<p>اليوم الحالي: <span id="dayCounter">1 / 30</span></p>
+</div>
 
-    <div class="card">
-        <h2>درس اليوم</h2>
+<div class="card">
 
-        <h3>am / is / are</h3>
+<h2 id="lessonTitle"></h2>
 
-        <p><b>I</b> ➜ am</p>
-        <p><b>He / She</b> ➜ is</p>
-        <p><b>They / We / You</b> ➜ are</p>
+<p id="lessonRule"></p>
 
-        <hr>
+<h3>📖 كلمات اليوم</h3>
 
-        <p>I am Abdullah.</p>
-        <p>He is a manager.</p>
-        <p>They are students.</p>
-    </div>
+<ul id="wordList"></ul>
 
-    <div class="card">
-        <h2>كلمات اليوم</h2>
+<button onclick="nextDay()">
+➡️ التالي
+</button>
 
-        <ul>
-            <li>Employee = موظف</li>
-            <li>Manager = مدير</li>
-            <li>Office = مكتب</li>
-            <li>Meeting = اجتماع</li>
-            <li>Report = تقرير</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>اختبار سريع</h2>
-
-        <p>أنا موظف</p>
-
-        <button onclick="checkAnswer(true)">I am an employee</button>
-        <button onclick="checkAnswer(false)">I is employee</button>
-        <button onclick="checkAnswer(false)">I are employee</button>
-
-        <h3 id="result"></h3>
-    </div>
+</div>
 
 </div>
 
